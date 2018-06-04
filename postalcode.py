@@ -22,7 +22,7 @@ def format_code(code):
 def validate_code(code):
     """ Validate UK Postal Code with regex available in
     https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom#Formatting
-    
+
     Keywords Arguments:
     code - string
 
@@ -63,7 +63,7 @@ def validate_code(code):
             return False
 
     if code[:2] in digit_zero:
-        if re.match('([A-Z]{2}[0]{1} [0-9]{1}[BD-HJLNP-UW-Z]{2}$)', code):
+        if re.match('([A-Z]{2}[0]{1} [0]{1}[BD-HJLNP-UW-Z]{2}$)', code):
             return True
         else:
             return False
